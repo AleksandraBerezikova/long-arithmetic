@@ -1,5 +1,10 @@
 # long-arithmetic
-## Запуск
+## Запуск тестов:
+```bash
+make run-test
+```
+
+## Запуск программы:
 Скомпилируйте проект:
 ```bash
 make main

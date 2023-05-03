@@ -96,6 +96,7 @@ void test_sub()
     assert(LongInt("-14") - LongInt("-15") == LongInt(1));
     assert(LongInt("-0") - LongInt("+0") == LongInt(0));
     assert(LongInt("-1") - LongInt("-1") == LongInt(0));
+    assert(LongInt("1000000000000000000000000000000") - LongInt("1000000000000000000000000000000") == LongInt(0));
     assert(LongInt("34783537829847836534787918348365763568710") - LongInt(67) == LongInt("34783537829847836534787918348365763568643"));
     cout << "test_sub passed!" << endl;
 } 

@@ -80,10 +80,10 @@ LongInt::LongInt(long long number)
 LongInt &LongInt::operator=(LongInt const &other)
 {
     if (this != &other)
-        {
-            this->negative = other.negative;
-            this->digits = other.digits;
-        }
+    {
+        this->negative = other.negative;
+        this->digits = other.digits;
+    }
     return *this;
 }
 
@@ -363,8 +363,7 @@ bool LongInt::operator<(LongInt const &second_number) const
                 {
                     return false;
                 }
-                return true;
-                
+                return true;           
             }
         }
     }

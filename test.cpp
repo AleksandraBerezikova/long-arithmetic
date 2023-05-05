@@ -100,6 +100,15 @@ void test_sub()
     assert(LongInt("34783537829847836534787918348365763568710") - LongInt(67) == LongInt("34783537829847836534787918348365763568643"));
     cout << "test_sub passed!" << endl;
 } 
+void test_miltip()
+{
+    assert(LongInt("-15") * LongInt(15) == LongInt(-225));
+    assert(LongInt("0") * LongInt(0) == LongInt(0));
+    assert(LongInt("0") * LongInt(15) == LongInt(-0));
+    assert(LongInt("0") * LongInt(15) == LongInt(-0));
+    assert(LongInt("15") * LongInt(10) == LongInt(150));
+    cout << "test_multip passed!" << endl;
+} 
 
 int main() 
 {
@@ -109,6 +118,7 @@ int main()
     test_less();
     test_sum();
     test_sub();
+    test_miltip();
 
     return 0;
 }

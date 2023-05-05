@@ -11,6 +11,7 @@ private:
     bool negative;
 
 public:
+    LongInt();
     LongInt(LongInt const &number);
     explicit LongInt(std::string number);
     explicit LongInt(long long number);
@@ -20,14 +21,16 @@ public:
     bool operator==(LongInt const& second_number) const;
     LongInt& operator+=(LongInt const &second_number);
     LongInt& operator-=(LongInt const &second_number);
+    LongInt& operator*=(LongInt const &second_number);
     bool operator<(LongInt const& second_number) const;
     bool operator>(LongInt const& second_number) const;
-
-private:
-    std::vector<char> add_vectors(std::vector<char> const& digits1, std::vector<char> const& digits2);
 };
 
 LongInt operator+(LongInt first_number, LongInt const& second_number);
 LongInt operator-(LongInt first_number, LongInt const& second_number);
+LongInt operator*(LongInt first_number, LongInt const& second_number);
+std::vector<char> add_vectors(std::vector<char> const& digits1, std::vector<char> const& digits2);
+std::vector<char> sub_vectors(std::vector<char> const& digits1, std::vector<char> const& digits2);
+std::vector<char> multip_vectors(std::vector<char> const& digits1, std::vector<char> const& digits2);
 
 #endif

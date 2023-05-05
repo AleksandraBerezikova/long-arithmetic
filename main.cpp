@@ -13,12 +13,19 @@ int main(int argc, char *argv[])
     std::string first_number, second_number;
     first_number = argv[1];
     second_number = argv[2];
+    LongInt g;
+    std::cout << g.to_string();
 
     LongInt num_1(first_number);
     LongInt num_2(second_number);
 
+    g = num_1;
+    std::cout << g.to_string();
+
     std::cout << first_number << " + " << second_number << " = " << (num_1 + num_2).to_string() << '\n';
     std::cout << first_number << " - " << second_number << " = " << (num_1 - num_2).to_string() << '\n';
+    std::cout << first_number << " * " << second_number << " = " << (num_1 * num_2).to_string() << '\n';
+
 
     return 0;
 }
